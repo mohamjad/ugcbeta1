@@ -1,0 +1,57 @@
+logging:
+  level: INFO
+  file: logs/backend.log
+  rotation: daily
+  retention_days: 30
+
+windows:
+  early_detection: 48
+  validation: 168
+  saturation: 336
+
+clustering:
+  min_shared_hashtags: 2
+  min_posts_per_cluster: 3
+  hashtag_similarity: 0.5
+  creator_diversity_weight: 0.4
+  engagement_strength_weight: 0.3
+  velocity_weight: 0.3
+
+validation:
+  min_creators: 10
+  min_regions: 2
+  confidence_threshold: 0.7
+
+platforms:
+  tiktok:
+    enabled: true
+    api_key: ${TIKTOK_API_KEY}
+    rate_limit: 100
+  
+  xiaohongshu:
+    enabled: true
+    scraper_enabled: true
+    rate_limit: 60
+  
+  rednote:
+    enabled: true
+    rate_limit: 60
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  cors_enabled: true
+  auth_required: false
+
+database:
+  host: localhost
+  port: 5432
+  name: ugc_intelligence
+  user: ${DB_USER}
+  password: ${DB_PASSWORD}
+
+cache:
+  enabled: true
+  host: localhost
+  port: 6379
+  ttl: 3600
