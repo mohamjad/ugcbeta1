@@ -1,4 +1,4 @@
-ugc intelligence backend
+ugc intelligence backend (from october - dec 2025)
 
 production-ready transparent architecture for social media trend detection. this backend system provides a completely transparent non-black-box solution for detecting early-stage social media trends across tiktok xiaohongshu rednote and other platforms. unlike traditional ml-heavy approaches that obscure their logic this system makes every decision visible traceable and adjustable.
 
